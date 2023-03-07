@@ -8,17 +8,13 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import {MaterialModule} from "./material.module";
 import {FormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
-import { CardFormComponent } from './card-form/card-form.component';
 import {MatRadioModule} from "@angular/material/radio";
-import {TransactionFormComponent} from "./transaction-form/transaction-form.component";
 import { TransactionsComponent } from './transactions/transactions.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
-    CardFormComponent,
-    TransactionFormComponent,
     TransactionsComponent
   ],
     imports: [

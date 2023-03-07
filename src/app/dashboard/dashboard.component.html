@@ -13,7 +13,7 @@
 
       <ng-container matColumnDef="pan">
         <th mat-header-cell *matHeaderCellDef>Numero de tarjeta</th>
-        <td mat-cell *matCellDef="let row">{{row.pan}}</td>
+        <td mat-cell *matCellDef="let row">{{row.maskPan}}</td>
       </ng-container>
 
       <ng-container matColumnDef="customerName">
@@ -34,10 +34,7 @@
       <ng-container matColumnDef="actions">
         <th mat-header-cell *matHeaderCellDef>Acciones</th>
         <td mat-cell *matCellDef="let row">
-          <button mat-mini-fab color="warn"  matTooltip="Nueva Transaccion" (click)="selectNewtTransaction(row.hashIdentifier)">
-            <mat-icon>playlist_add</mat-icon>
-          </button>
-          <button style="margin-left: 10px" mat-mini-fab color="warn" matTooltip="Ver Transacciones" (click)="openTransactionsDialog(row.hashIdentifier)">
+          <button style="margin-left: 10px" mat-mini-fab color="warn" matTooltip="Ver Transacciones" (click)="openTransactionsDialog(row.pan)">
             <mat-icon>assessment</mat-icon>
           </button>
         </td>
@@ -47,12 +44,4 @@
 
     </table>
   </div>
-</div>
-
-<!------------------ Fab butttons---------------------->
-
-<div class="alss-fab-mat ">
-  <button mat-fab color="primary" (click)="selectNewtCard()">
-    <mat-icon>add</mat-icon>
-  </button>
 </div>
